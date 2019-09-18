@@ -1,14 +1,6 @@
 <template>
   <div class="hello">
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{path:'/organize'}">组织管理</el-breadcrumb-item>
-      <el-breadcrumb-item>成员管理</el-breadcrumb-item>
-    </el-breadcrumb>
 
-    <el-tabs v-model="activeName" @tab-click="handleClick">
-      <!--<el-tab-pane label="用户管理" name="first"><origize></origize></el-tab-pane>-->
-      <el-tab-pane label="配置管理" name="second">
-          <template>
             <el-table :data="list">
               <el-table-column prop="memberNick" label="成员昵称"></el-table-column>
               <el-table-column prop="memberJob" label="成员职位"></el-table-column>
@@ -32,13 +24,6 @@
 
             </el-table>
 
-          </template>
-
-      </el-tab-pane>
-      <!--<el-tab-pane label="角色管理" name="third"><active></active></el-tab-pane>-->
-    </el-tabs>
-
-    <router-view></router-view>
 
   </div>
 </template>

@@ -1,14 +1,23 @@
 <template>
   <div class="hello">
-    <!--<el-breadcrumb separator-class="el-icon-arrow-right">-->
-      <!--<el-breadcrumb-item>组织管理</el-breadcrumb-item>-->
 
-    <!--</el-breadcrumb>-->
-    <el-tabs v-model="activeName" @tab-click="handleClick">
-            <el-tab-pane label="组织管理" name="first"><origize></origize></el-tab-pane>
-    </el-tabs>
+    <el-container>
+      <!--style="background-color: beige;line-height: 60px"-->
+      <el-header >欢迎来到火影忍者世界</el-header>
+      <el-main>
+        <el-tabs v-model="activeName" @tab-click="handleClick">
+          <el-tab-pane label="组织管理" name="first">
+                <origize v-if="false"></origize>
+                <router-view/>
+          </el-tab-pane>
+        </el-tabs>
 
-    <router-view></router-view>
+
+      </el-main>
+
+    </el-container>
+
+    <!---->
 
   </div>
 </template>

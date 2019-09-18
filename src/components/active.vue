@@ -1,9 +1,5 @@
 <template>
   <div class="hello">
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{path:'/organize'}">组织管理</el-breadcrumb-item>
-      <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-    </el-breadcrumb>
 
     <el-table :data="list">
       <el-table-column  label="活动类型">

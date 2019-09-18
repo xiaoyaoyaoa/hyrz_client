@@ -1,12 +1,5 @@
 <template>
   <div class="hello">
-    <el-breadcrumb separator-class="el-icon-arrow-right">
-      <el-breadcrumb-item :to="{path:'/organize'}">组织管理</el-breadcrumb-item>
-      <el-breadcrumb-item>组织详情</el-breadcrumb-item>
-
-    </el-breadcrumb>
-    <el-tabs v-model="activeName" @tab-click="handleChange">
-      <el-tab-pane label="配置管理" name="second">
 
         <el-form ref="form" :model="form" label-width="80px">
             <el-form-item label="组织名称">
@@ -28,8 +21,7 @@
           </el-form-item>
         </el-form>
 
-      </el-tab-pane>
-    </el-tabs>
+
 
 
   </div>
@@ -70,11 +62,11 @@ export default {
     handleClick(){
       // console.log(_row)
       // let oid=_row.organizationId
-      this.$router.push({path:'/member/'+this.oid})
+      this.$router.push({path:'/organize/member/'+this.oid})
     },
     handleActive(){
       // let oid=_row.organizationId
-      this.$router.push({path:'/active/'+this.oid})
+      this.$router.push({path:'/organize/active/'+this.oid})
     }
   }
 }

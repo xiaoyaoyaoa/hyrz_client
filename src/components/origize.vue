@@ -33,7 +33,7 @@ export default {
   mounted(){
     let _this=this
     http.fetchGet('/server/index.json').then(function(res){
-        console.log(res)
+        // console.log(res)
         _this.list=res.organizationList
     }).catch((e)=>{
       console.log(e)
@@ -48,11 +48,11 @@ export default {
     handleMember(_row){
       // console.log(_row)
       let oid=_row.organizationId
-      this.$router.push({path:'/member/'+oid})
+      this.$router.push({path:'/organize/member/'+oid})
     },
     handleActive(_row){
       let oid=_row.organizationId
-      this.$router.push({path:'/active/'+oid})
+      this.$router.push({path:'/organize/active/'+oid})
     }
   }
 }
